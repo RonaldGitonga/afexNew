@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import Header from '../components/headerone/Main'
-import Bredcom from '../components/Bredcom/Main'
-import Brand from '../components/menhomethree/Brand'
-import First from '../meneventdeatils/First'
-import LandingLayout from '../../../LandingLayout'
+import Header from '../../components/headerone/Main'
+import Bredcom from '../../components/Bredcom/Main'
+import Brand from '../../components/menhomethree/Brand'
+import First from '../../components/menevent/First'
+import LandingLayout from '../../LandingLayout'
 
 function page(){
 
