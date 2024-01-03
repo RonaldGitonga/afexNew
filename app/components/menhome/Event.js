@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-
+import BackgroundOne from '../../../public/assets/img/afex-pics/events/IMG_9403.jpg';
+import BackgroundTwo from '../../../public/assets/img/afex-pics/events/SATs.jpg';
+import BackgroundThree from '../../../public/assets/img/afex-pics/events/graduation.jpg';
+import Image from 'next/image';
 function Event() {
   return (
     <>
@@ -35,26 +38,53 @@ function Event() {
                     <div className="event-item mb-30 hover-zoomin">
                     <div className="thumb">
                         <Link href="/single-event">
-                          <img src="assets/img/bg/evn-img-1.jpg" alt="contact-bg-an-01" />
+                          <Image src={BackgroundTwo} width={1180} height={787} alt='evn-img1'/>
                         </Link>
                     </div>
                     <div className="event-content">
                         <div className="date">
-                        <strong>18</strong> March, 2023
+                        <strong>18</strong> March, 2024
                         </div>
                         <h3>
                         <Link href="/single-event">
                             {" "}
-                            Basic UI &amp; UX Design for new development
+                            QnA &amp; SAT Prep and testing
                         </Link>
                         </h3>
                         <p>
-                        Seamlessly visualize quality ellectual capital without superior
-                        collaboration and idea tically
+                        SAT 2024 open day
                         </p>
                         <div className="time">
                         3:30 pm - 4:30 pm <i className="fal fa-long-arrow-right" />{" "}
-                        <strong>United Kingdom</strong>
+                        <strong>Afex Hub Premises</strong>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+                <div className="col-lg-4 col-md-6  wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
+                    <div className="event-item mb-30 hover-zoomin">
+                    <div className="thumb">
+                        <Link href="">
+                        <Image src={BackgroundThree} width={1180} height={787} alt='evn-img3'/>
+                        </Link>
+                    </div>
+                    <div className="event-content">
+                        <div className="date">
+                        <strong>22</strong> March, 2024
+                        </div>
+                        <h3>
+                        <Link href="">
+                            {" "}
+                            GRE/GMAT Graduation Day
+                        </Link>
+                        </h3>
+                        <p>
+                        GRE/GMAT Graduation,December Cohort
+                        </p>
+                        <div className="time">
+                        3:30 pm - 4:30 pm <i className="fal fa-long-arrow-right" />{" "}
+                        <strong>Nairobi</strong>
                         </div>
                     </div>
                     </div>
@@ -62,142 +92,31 @@ function Event() {
                 <div className="col-lg-4 col-md-6  wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
                     <div className="event-item mb-30 hover-zoomin">
                     <div className="thumb">
-                        <Link href="/single-event">
-                            <img src="assets/img/bg/evn-img-2.jpg" alt="contact-bg-an-01" />
+                        <Link href="">
+                        <Image src={BackgroundOne} width={1180} height={787} alt='evn-img1'/>
                         </Link>
                     </div>
                     <div className="event-content">
                         <div className="date">
-                        <strong>20</strong> March, 2023
+                        <strong>22</strong> May, 2024
                         </div>
                         <h3>
-                        <Link href="/single-event">
-                            Digital Education Market Briefing: Minnesota 2023
-                        </Link>
-                        </h3>
-                        <p>
-                        Seamlessly visualize quality ellectual capital without superior
-                        collaboration and idea tically
-                        </p>
-                        <div className="time">
-                        3:30 pm - 4:30 pm <i className="fal fa-long-arrow-right" />{" "}
-                        <strong>United Kingdom</strong>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6  wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
-                    <div className="event-item mb-30 hover-zoomin">
-                    <div className="thumb">
-                        <Link href="/single-event">
-                            <img src="assets/img/bg/evn-img-3.jpg" alt="contact-bg-an-01" />
-                        </Link>
-                    </div>
-                    <div className="event-content">
-                        <div className="date">
-                        <strong>22</strong> March, 2023
-                        </div>
-                        <h3>
-                        <Link href="/single-event">
+                        <Link href="">
                             {" "}
-                            Learning Network Webinars for Music Teachers
+                        IELTS/TOEFL Farewell Dinner
                         </Link>
                         </h3>
                         <p>
-                        Seamlessly visualize quality ellectual capital without superior
-                        collaboration and idea tically
+                        January Cohort farewell Dinner
                         </p>
                         <div className="time">
-                        3:30 pm - 4:30 pm <i className="fal fa-long-arrow-right" />{" "}
-                        <strong>United Kingdom</strong>
+                        3:30 pm - 8:30 pm <i className="fal fa-long-arrow-right" />{" "}
+                        <strong>Sarova Panafric</strong>
                         </div>
                     </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6  wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
-                    <div className="event-item mb-30 hover-zoomin">
-                    <div className="thumb">
-                        <Link href="/single-event">
-                        <img src="assets/img/bg/evn-img-4.jpg" alt="contact-bg-an-01" />
-                        </Link>
-                    </div>
-                    <div className="event-content">
-                        <div className="date">
-                        <strong>22</strong> March, 2023
-                        </div>
-                        <h3>
-                        <Link href="/single-event">
-                            {" "}
-                            Next-Gen Higher Education Students Have Arrived?
-                        </Link>
-                        </h3>
-                        <p>
-                        Seamlessly visualize quality ellectual capital without superior
-                        collaboration and idea tically
-                        </p>
-                        <div className="time">
-                        3:30 pm - 4:30 pm <i className="fal fa-long-arrow-right" />{" "}
-                        <strong>United Kingdom</strong>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6  wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
-                    <div className="event-item mb-30 hover-zoomin">
-                    <div className="thumb">
-                        <Link href="/single-event">
-                            <img src="assets/img/bg/evn-img-5.jpg" alt="contact-bg-an-01" />
-                        </Link>
-                    </div>
-                    <div className="event-content">
-                        <div className="date">
-                        <strong>24</strong> March, 2023
-                        </div>
-                        <h3>
-                        <Link href="/single-event">
-                            {" "}
-                            Digital Art &amp; 3D Model – a future for film company
-                        </Link>
-                        </h3>
-                        <p>
-                        Seamlessly visualize quality ellectual capital without superior
-                        collaboration and idea tically
-                        </p>
-                        <div className="time">
-                        3:30 pm - 4:30 pm <i className="fal fa-long-arrow-right" />{" "}
-                        <strong>United Kingdom</strong>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6  wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
-                    <div className="event-item mb-30 hover-zoomin">
-                    <div className="thumb">
-                        <Link href="/single-event">
-                            <img src="assets/img/bg/evn-img-6.jpg" alt="contact-bg-an-01" />
-                        </Link>
-                    </div>
-                    <div className="event-content">
-                        <div className="date">
-                        <strong>30</strong> March, 2023
-                        </div>
-                        <h3>
-                        <Link href="/single-event">
-                            {" "}
-                            Conscious Discipline Summer Institute
-                        </Link>
-                        </h3>
-                        <p>
-                        Seamlessly visualize quality ellectual capital without superior
-                        collaboration and idea tically
-                        </p>
-                        <div className="time">
-                        3:30 pm - 4:30 pm <i className="fal fa-long-arrow-right" />{" "}
-                        <strong>United Kingdom</strong>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+       
                 </div>
             </div>
         </section>

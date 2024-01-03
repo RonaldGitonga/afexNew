@@ -5,7 +5,7 @@ function Campus() {
     <>
         <section className="steps-area2 p-relative fix" style={{ backgroundColor: "#125875" }} >
             <div className="animations-02">
-                <img src="assets/img/bg/an-img-10.png" alt="an-img-01" />
+                <img src="assets/img/afex-pics/RAMONA-POTRAIT-2.jpg" alt="an-img-01" />
             </div>
             <div className="container">
                 <div className="row align-items-center">
@@ -19,18 +19,21 @@ function Campus() {
                     <div className="text">
                         <h2>Campus Tour</h2>
                         <p>
-                        Campus on a tour designed for prospective graduate and
-                        professional students. You will see how our university like,
-                        facilities, studenst and life in this university. Meet our
-                        graduate admissions representative to learn more about our
-                        graduate programs and decide what it the best for you.
+                        Embark on a transformative journey by visiting our campus – 
+                        where dreams take shape and futures unfold. Immerse yourself 
+                        in the vibrant pulse of academic life, explore cutting-edge 
+                        facilities, and connect with a community that fosters growth. 
+                        A campus tour is more than a stroll; it's a glimpse into your 
+                        next chapter. Experience the energy, envision your aspirations, 
+                        and let the campus become the canvas for your educational masterpiece. 
+                        Schedule your tour today and step into the realm of possibilities that await you.
                         </p>
                     </div>
                     </div>
                 </div>
                 <div className="col-lg-6 col-md-12">
                     <div className="step-img2 wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s" >
-                        <img src="assets/img/bg/steps-img-2.png" alt="class image" />
+                        <img src="assets/img/afex-pics/EMMANUEL POT 2.jpg" alt="class image" />
                     </div>
                 </div>
                 </div>
@@ -45,7 +48,7 @@ function Campus() {
                 <div className="row align-items-center">
                 <div className="col-lg-6 col-md-12">
                     <div className="step-img3 wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s" >
-                        <img src="assets/img/bg/steps-img-3.png" alt="class image" />
+                        <img src="assets/img/afex-pics/RAM-4.jpg" alt="class image" />
                     </div>
                 </div>
                 <div className="col-lg-6 col-md-12">
@@ -58,11 +61,11 @@ function Campus() {
                     <div className="text">
                         <h2>Powerful Alumni</h2>
                         <p>
-                        Campus on a tour designed for prospective graduate and
-                        professional students. You will see how our university like,
-                        facilities, studenst and life in this university. Meet our
-                        graduate admissions representative to learn more about our
-                        graduate programs and decide what it the best for you.
+                        Our distinguished alumni stand testament to the power of our 
+                        comprehensive training and strategic placements. Many have seamlessly 
+                        transitioned to prestigious universities, embodying the success that stems 
+                        rom our commitment to excellence. Join a legacy of accomplished individuals 
+                        who have excelled globally, shaped by our unwavering dedication to nurturing talent.
                         </p>
                     </div>
                     </div>

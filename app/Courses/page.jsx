@@ -15,9 +15,9 @@ function page() {
   return (
     <LandingLayout>
         <Header/>
-        <Bredcom title="Home" subtitle="Courses"/>
+        {/* <Bredcom title="Home" subtitle="Courses"/> */}
         <First/>
-        <Brand/>
+        
     </LandingLayout>
   )
 }

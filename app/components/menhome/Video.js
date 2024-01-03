@@ -1,7 +1,7 @@
-'use state'
+
 import React from 'react'
-import Video from 'next-video'
-import kenya_student from '../../../videos/kenya_student.mp4'
+import { CldVideoPlayer } from 'next-cloudinary';
+
 
 //import Link from 'next/link';
 
@@ -23,7 +23,7 @@ const aboutVideo=()=>{
                     <div className="section-title cta-title video-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s" >
                     <h2>
                         {" "}
-                        We're <span>AFEX HUB</span> &amp; We're Diffirent
+                        We're <span>AFEX HUB</span> &amp; We're Different
                     </h2>
                     <p>
                         Our community is being called to reimagine the future. As the only
@@ -34,7 +34,8 @@ const aboutVideo=()=>{
                 <div className="col-lg-2 col-md-2"></div>
                 <div className="col-lg-4">
                     <div className="s-video-content">
-                    <Video src={kenya_student}/>
+                  
+
                     </div>
                 </div>
                                 </div>

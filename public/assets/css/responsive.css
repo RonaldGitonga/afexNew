@@ -1911,7 +1911,7 @@ display: inline-block;
     width:100% !important;
 }
     .newslater-area img{
-        margin-bottom: 30px;'
+        margin-bottom: 30px;
     }
     .newslater-title .icon {
   margin-right: 0px;
@@ -2469,14 +2469,16 @@ background: #002e5b;
     font-size: 15px;
 }
 .main-menu  ul > li > a::before {content: none;}
-.main-menu ul li a {
+
+.main-menu ul li a{
 	color: #fff;
 	padding: 12px 15px;
 	display: inline-block;
 	font-size: 14px;
-	       font-family: 'Jost', sans-serif;
+	font-family: Jost , sans-serif;
 	font-weight: 500;
 }
+
 .second-menu {
 	margin-bottom: 0;
 	box-shadow: none;
@@ -2804,6 +2806,8 @@ margin: 0;
 }
 
 }
+
+
 /* Large Mobile :480px. */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     .services-active2 .slider-nav .slick-list.draggable {
@@ -2816,4 +2820,5 @@ margin: 0;
     .button-group button {
     margin: 0 2px;
 
+} 
 }

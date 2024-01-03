@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import University from '../Menabout/University'
 import Header from '../headerone/Main'
@@ -12,7 +13,7 @@ function Main() {
   return (
     <>
         <Header/>
-        <Bredcom title="Home" subtitle="About Us"/>
+        
         <University/>
         <Scholarship/>
         <Frequently/>

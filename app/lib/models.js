@@ -1,8 +1,16 @@
+//@ts-nocheck
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    username: {
+    FirstName: {
+      type: String,
+      required: true,
+      unique: true,
+      min: 3,
+      max: 20,
+    },
+    LastName: {
       type: String,
       required: true,
       unique: true,
@@ -14,6 +22,12 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    PhoneNumber: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+
     password: {
       type: String,
       required: true,
@@ -25,19 +39,20 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ['Admin','Finance','Marketing','Tutor','Student'],
+      default:'Student',
       required:true,
+    
       
     },
     isActive: {
       type: Boolean,
       default: true,
     },
-    phone: {
-      type: String,
-    },
+   
     address: {
       type: String,
     },
+   
   },
   { timestamps: true }
 );
@@ -133,10 +148,26 @@ const blogSchema = new mongoose.Schema({
 image:{type:String},
 
 });
+//analtyics model
   
+const analyticsSchema = new mongoose.Schema({
+  SAT:{Number}, // String is shorthand for {type: String}
+  GMAT:{Number},
+  IELTS:{ Number},
+  pageVisits:{Number},
+
+  date: { type: Date, default: Date.now },
+  createdAt:{
+    type:Date,default:Date.now,
+    
+  },
+});
+
+
 
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
 export const Course = mongoose.models.Course || mongoose.model("Course", courseSchema);
 export const Event=mongoose.models.Event || mongoose.model("Event",eventSchema);
 export const Blog=mongoose.models.Blog || mongoose.model("Blog",blogSchema);
+export const Analytics=mongoose.models.Analytics || mongoose.model("Analytics",analyticsSchema);

@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 
 function Redslider() {
   const images = [
-    'assets/img/brand/b-logo1.png',
+    'assets/img/logo/mylogos/yale-logo-blue.png',
     'assets/img/brand/b-logo2.png',
     'assets/img/brand/b-logo3.png',
     'assets/img/brand/b-logo4.png',

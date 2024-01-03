@@ -1,6 +1,56 @@
-import React, { useState } from 'react'
+'use client'
+import React, { useState,useRef } from 'react'
 
 
+
+
+const handleChange=(e)=>{
+    const {name,value}=e.target;
+
+    setForm({...form,[name]:value})
+  }
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+
+    setLoading(true);
+    emailjs.send(
+      'service_epchor9',
+      'template_z80dsmq',
+      {
+        from_name:form.name,
+        to_name:"Ronald Gitonga",//recipient account name
+        from_email:'form.email',
+        to_email:'rgatuiku@gmail.com',//recipient email
+        from_subject:form.subject,
+        message:form.message,
+        phone:form.phone,
+
+
+      },
+      'TwFsrPqxSmJVbbCD5'
+
+    )
+    .then(()=>{
+      setLoading(false);
+      alert('Thank you.I will get back to you as soon as possible');
+      setForm(
+        {
+        name:'',
+        email:'',
+       
+        message:'',
+        phone:'',
+      }
+      )
+
+    },(error)=>{
+      setLoading(false);
+      console.log(error);
+      alert('Something went wrong')
+    })
+
+  }
 const faqItems = [
     {
         question: 'Cras turpis felis, elementum sed mi at arcu ?',
@@ -25,6 +75,18 @@ const faqItems = [
 ];
 
 function Frequently() {
+    const formRef=useRef();
+    const [form,setForm]=useState(
+        {
+          name:'',
+          email:'',
+          subject:'',
+          message:'',
+          phone:'',
+        }
+      
+      );
+      const [loading,setLoading]=useState(false);
 
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -46,10 +108,7 @@ function Frequently() {
                         <div className="col-lg-7">
                             <div className="section-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
                                 <h2>Get every single answer here.</h2>
-                                <p>
-                                    A business or organization established to provide a particular
-                                    service, typically one that involves a organizing transactions.
-                                </p>
+                             
                             </div>
                             <div className="faq-wrap mt-30 pr-30">
                                 <div className="accordion" id="accordionExample">
@@ -74,32 +133,33 @@ function Frequently() {
                         <div className="col-lg-5">
                             <div className="contact-bg02">
                                 <div className="section-title wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
-                                    <h2>Make An Contact</h2>
+                                    <h2>Have A Question?</h2>
                                 </div>
-                                <form action="mail.php" method="post" className="contact-form mt-30 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
+                                <form action={handleSubmit} ref={{formRef}} className="contact-form mt-30 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s" >
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="contact-field p-relative c-name mb-20">
-                                                <input type="text" id="firstn" name="firstn" placeholder="First Name" required="" />
+                                                <input type="text" onChange={handleChange} id="firstn" name="name" value={form.name} placeholder="First Name" required="" />
                                             </div>
                                         </div>
                                         <div className="col-lg-12">
                                             <div className="contact-field p-relative c-subject mb-20">
-                                                <input type="text" id="email" name="email" placeholder="Email" required="" />
+                                                <input type="text" onChange={handleChange} id="email" name="email" value={form.email} placeholder="Email" required="" />
                                             </div>
                                         </div>
                                         <div className="col-lg-12">
                                             <div className="contact-field p-relative c-subject mb-20">
-                                                <input type="text" id="phone" name="phone" placeholder="Phone No." required="" />
+                                                <input type="text" onChange={handleChange} id="phone" name="phone" value={form.phone} placeholder="Phone No." required="" />
                                             </div>
                                         </div>
                                         <div className="col-lg-12">
                                             <div className="contact-field p-relative c-message mb-30">
-                                                <textarea name="message" id="message" cols={30} rows={10} placeholder="Write comments" defaultValue={""} />
+                                                <textarea name="message"onChange={handleChange}  id="message" value={form.message} cols={30} rows={10} placeholder="Write comments" defaultValue={""} />
                                             </div>
                                             <div className="slider-btn">
-                                                <button className="btn ss-btn" data-animation="fadeInRight" data-delay=".8s" >
-                                                    <span>Submit Now</span>{" "}
+                                                <button type='submit'className="btn ss-btn" data-animation="fadeInRight" data-delay=".8s" >
+                                                    <span>Submit Now
+                                                    {loading ? 'Sending..': ""}</span>{" "}
                                                     <i className="fal fa-long-arrow-right" />
                                                 </button>
                                             </div>

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 
@@ -13,10 +14,10 @@ function About() {
                 <div className="row justify-content-center align-items-center">
                 <div className="col-lg-6 col-md-12 col-sm-12">
                     <div className="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s" >
-                    <img src="assets/img/features/About-img-02.png" alt="img" />
+                    <img src="assets/img/afex-pics/KARIMI POTRAIT.jpg" alt="img" className='rounded-md' />
                     <div className="about-text second-about">
                         <span>
-                        25 <sub>+</sub>
+                        15 <sub>+</sub>
                         </span>
                         <p>Years of Experience</p>
                     </div>
@@ -31,18 +32,17 @@ function About() {
                         <h2>About Us</h2>
                     </div>
                     <p className="txt-clr">
-                        Our community is being called to reimagine the future. As the only
-                        university where a renowned design school comes together with
-                        premier colleges, we are making learning more relevant and
-                        transformational.
+                    As a premier test preparation company, we specialize in comprehensive SAT, GMAT,
+                     and IELTS training programs. With a commitment to academic excellence, AfexHub 
+                     employs seasoned instructors and cutting-edge resources to equip students with 
+                     the skills and confidence needed to excel in these critical exams. The company's 
+                     personalized approach, state-of-the-art facilities, and proven track record make 
+                     AfexHub a trusted choice for ambitious individuals seeking top-notch preparation 
+                     for their SAT, GMAT, and IELTS examinations. Elevate your academic journey with 
+                     our tailored training solutions and unlock your full potential.
                     </p>
-                    <p>
-                        We are proud to offer top ranige in employment services such and
-                        asser payroll and benefits administrato managemen and asistance with
-                        global business range ployment employer readings from religious
-                        texts or literature are also commonly inc compliance.
-                    </p>
-                    <div className="about-content2">
+                    
+                    {/* <div className="about-content2">
                         <div className="row">
                         <div className="col-md-12">
                             <ul className="green2">
@@ -52,7 +52,7 @@ function About() {
                                     <span>01</span>
                                 </div>{" "}
                                 <div className="text">
-                                    <h3>Doctoral Degrees</h3>{" "}
+                                    <h3>Global Placements</h3>{" "}
                                     <p>
                                     consectetur adipiscing elit sed do eiusmod tem incid
                                     idunt.
@@ -77,7 +77,7 @@ function About() {
                             </ul>
                         </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="slider-btn mt-20">
                         <Link href="/About" className="btn ss-btn smoth-scroll">
                         Read More <i className="fal fa-long-arrow-right" />

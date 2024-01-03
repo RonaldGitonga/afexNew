@@ -23,46 +23,25 @@ function Courses() {
             category: 'IELTS/TOEFL',
             title: 'IELTS/TOEFL',
             description: 'Seamlessly visualize quality intellectual capital without superior collaboration and idea tically',
-            link: '/single-courses',
-            img: 'assets/img/bg/couress-img-1.jpg',
+            link: '/Courses/IELTS-TOEFL',
+            img: 'assets/img/courses/IELTS.jpg',
         },
         {
-            category: 'PREPS',
+            category: 'SAT',
             title: 'SATs',
             description: 'Seamlessly visualize quality intellectual capital without superior collaboration and idea tically',
-            link: '/single-courses',
-            img: 'assets/img/bg/couress-img-2.jpg',
+            link: '/Courses/SAT',
+            img: 'assets/img/courses/SATs.jpg',
         },
      
         {
             category: 'GRE/GMAT ',
             title: 'GRE/GMAT test prep',
             description: 'Seamlessly visualize quality intellectual capital without superior collaboration and idea tically',
-            link: '/single-courses',
-            img: 'assets/img/bg/couress-img-4.jpg',
+            link: '/Courses/GRE&GMAT',
+            img: 'assets/img/courses/GMAT.jpg',
         },
-        {
-            category: 'IELTS/TOEFL',
-            title: 'IELTS/TOEFL',
-            description: 'Seamlessly visualize quality intellectual capital without superior collaboration and idea tically',
-            link: '/single-courses',
-            img: 'assets/img/bg/couress-img-1.jpg',
-        },
-        {
-            category: 'PREPS',
-            title: 'SATs',
-            description: 'Seamlessly visualize quality intellectual capital without superior collaboration and idea tically',
-            link: '/single-courses',
-            img: 'assets/img/bg/couress-img-2.jpg',
-        },
-     
-        {
-            category: 'GRE/GMAT ',
-            title: 'GRE/GMAT test prep',
-            description: 'Seamlessly visualize quality intellectual capital without superior collaboration and idea tically',
-            link: '/single-courses',
-            img: 'assets/img/bg/couress-img-4.jpg',
-        },
+      
 
    
     
@@ -75,13 +54,13 @@ function Courses() {
         prevArrow: <SamplePrevArrow/>,
         nextArrow: <SampleNextArrow/>,
         speed: 1000,
-        slidesToShow: 4,
+        slidesToShow: 2.4,
         slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true
@@ -91,7 +70,7 @@ function Courses() {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 0.7
                 }
             },
             {

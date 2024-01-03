@@ -14,13 +14,13 @@ function page() {
   return (
     <LandingLayout>
         <Header/>
-        <Bredcom title="Home" subtitle="About Us"/>
+        {/* <Bredcom title="Home" subtitle="About Us"/> */}
         <University/>
-        <Scholarship/>
-        <Frequently/>
+        {/* <Scholarship/> */}
+        {/* <Frequently/> */}
         <Campus/>
         <Testimonial/>
-        <Brand/>
+       
     </LandingLayout>
   )
 }

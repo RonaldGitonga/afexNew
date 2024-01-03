@@ -5,18 +5,18 @@ function University() {
     <>
         <section className="about-area about-p pt-120 pb-120 p-relative fix">
             <div className="animations-02">
-                <img src="assets/img/bg/an-img-02.png" alt="contact-bg-an-01" />
+                <img src="assets/img/afex-pics/OMTATA PORTRAIT 1.jpg" alt="contact-bg-an-01" />
             </div>
             <div className="container">
                 <div className="row justify-content-center align-items-center">
                 <div className="col-lg-6 col-md-12 col-sm-12">
                     <div className="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s" >
-                    <img src="assets/img/features/About_img_05.png" alt="img" />
+                    <img src="assets/img/afex-pics/OMTATA POTRAIT 1.jpg" className='rounded-md'alt="img" />
                     <div className="about-text second-about three-about">
                         <span>
-                        25 <sub>+</sub>
+                        82 <sub>+</sub>
                         </span>
-                        <p>Years of Experience</p>
+                        <p>US Admissions Annually</p>
                     </div>
                     </div>
                 </div>
@@ -26,19 +26,21 @@ function University() {
                         <h5>
                         <i className="fal fa-graduation-cap" /> About Our Campus
                         </h5>
-                        <h2>A Few Words About AfexHub</h2>
+                        <h2>Who We are</h2>
                     </div>
                     <p className="txt-clr">
-                        Our community is being called to reimagine the future. As the only
-                        university where a renowned design school comes together with
-                        premier colleges, we are making learning more relevant and
-                        transformational.
+                    AFEX Hub Limited is a results- driven college advisory organization that 
+                    has placed hundreds of students in institutions within the USA and Canada 
+                    mostly on scholarships for the past twelve years. We are headquartered in Accra, 
+                    Ghana and also have a branch in Nairobi, Kenya. 
                     </p>
                     <p>
-                        We are proud to offer top ranige in employment services such and
-                        asser payroll and benefits administrato managemen and asistance with
-                        global business range ployment employer readings from religious
-                        texts or literature are also commonly inc compliance.
+                    Across Ghana and Kenya, AFEX is a 
+                    market leader in preparing 
+                    students for the SAT, GRE, GMAT, IELTS, TOEFL and SSAT. Our students have achieved 
+                    remarkable feats at these international exams, boosting students’ chances of gaining 
+                    admissions into top schools. In August 2022 alone, 74% of our students ranked Top 1% of 
+                    million test-takers worldwide.
                     </p>
                     <div className="about-content2">
                         <div className="row">
@@ -47,13 +49,12 @@ function University() {
                             <li>
                                 <div className="abcontent">
                                 <div className="ano">
-                                    <span>01</span>
+                                    <span>25% </span>
                                 </div>{" "}
                                 <div className="text">
-                                    <h3>Global Placements </h3>{" "}
+                                    <h3>SAT Scorers </h3>{" "}
                                     <p>
-                                    consectetur adipiscing elit sed do eiusmod tem incid
-                                    idunt.
+                                    Top 1% of the SAT Scores Worldwide
                                     </p>
                                 </div>
                                 </div>
@@ -61,13 +62,12 @@ function University() {
                             <li>
                                 <div className="abcontent">
                                 <div className="ano">
-                                    <span>02</span>
+                                    <span>82</span>
                                 </div>{" "}
                                 <div className="text">
-                                    <h3>Global Students</h3>{" "}
+                                    <h3>US Admissions</h3>{" "}
                                     <p>
-                                    consectetur adipiscing elit sed do eiusmod tem incid
-                                    idunt.
+                                    Average Annual School Admissions
                                     </p>
                                 </div>
                                 </div>

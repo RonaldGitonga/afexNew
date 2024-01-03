@@ -6,26 +6,29 @@ import Link from 'next/link'
 const First=()=>{
   const courses=[
   {
-    imgSrc: 'assets/img/bg/couress-img-1.jpg',
+    imgSrc: 'assets/img/courses/SATs.jpg',
     category: 'SATs',
     title: 'SAT Test Prep',
     description:
-      'AFEX Hub Ltd offers a comprehensive SAT prep program that includes group classes and practice tests to help students achieve their best scores on this important standardized test.',
-  },
+      'We offer a comprehensive SAT prep program that includes group classes and practice tests to help students achieve their best scores on this important standardized test.',
+      page:'/Courses/SAT'
+    },
   {
-    imgSrc: 'assets/img/bg/couress-img-2.jpg',
+    imgSrc: 'assets/img/courses/IELTS.jpg',
     category: 'IELTS/TOEFL',
     title: 'IETLTS/TOEFL Prep',
     description:
       'We offer comprehensive test preparation programs for the TOEFL and IELTS exams, two of the most widely accepted language proficiency tests for academic purposes. ',
-  },
+      page:'/Courses/IELTS-TOEFL'
+    },
   {
-    imgSrc: 'assets/img/bg/couress-img-3.jpg',
+    imgSrc: 'assets/img/courses/GMAT.jpg',
     category: 'GRE/GMAT',
     title: 'GRE/GMAT Test Prep',
     description:
       'Our GRE and GMAT test prep program provides comprehensive group classes to help students achieve their desired scores and gain admission to top graduate schools.',
-  },
+    page:'/Courses/GRE&GMAT'
+    },
   ]
   return (
     <>
@@ -55,7 +58,7 @@ const First=()=>{
               <div className="col-lg-4 col-md-6" key={index}>
                 <div className="courses-item mb-30 hover-zoomin">
                   <div className="thumb fix">
-                    <Link href="/Courses/CourseDetails">
+                    <Link href={course.page}>
                       <img src={course.imgSrc} alt="course-img" />
                     </Link>
                   </div>
@@ -64,10 +67,10 @@ const First=()=>{
                       <i className="fal fa-graduation-cap" /> {course.price}
                     </div>
                     <h3>
-                      <Link href="/Courses/CourseDetails">{course.title}</Link>
+                      <Link href={course.page}>{course.title}</Link>
                     </h3>
                     <p>{course.description}</p>
-                    <Link href="/Courses/CourseDetails" className="readmore">
+                  <Link href={course.page} className="readmore">
                       Read More <i className="fal fa-long-arrow-right" />
                     </Link>
                   </div>

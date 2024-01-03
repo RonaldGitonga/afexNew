@@ -1,61 +1,66 @@
 import React from 'react';
 import Link from 'next/link';
+// import BackgroundOne from '../../../public/assets/img/afex-pics/events/IMG_9403.jpg';
+// import BackgroundTwo from '../../../public/assets/img/afex-pics/events/SATs.jpg';
+// import BackgroundThree from '../../../public/assets/img/afex-pics/events/graduation.jpg';
+import Image from 'next/image';
 
 const events = [
   {
     id: 1,
-    date: '20 March, 2023',
-    title: 'Basic UI & UX Design for new development',
-    image: 'assets/img/bg/evn-img-1.jpg',
+    date: '18 March, 2024',
+    title: 'QnA: SAT Prep and testing',
+    image: '/assets/img/afex-pics/events/SATs.jpg',
     description:
-      'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
+      'SAT 2024 open day',
     time: '3:30 pm - 4:30 pm',
   },
   {
     id: 2,
-    date: '20 March, 2023',
-    title: 'Digital Education Market Briefing: Minnesota 2023',
-    image: 'assets/img/bg/evn-img-2.jpg',
+    date: '22 March, 2024',
+    title: 'GRE/GMAT Graduation Day',
+    image:'/assets/img/afex-pics/events/graduation.jpg',
+    
     description:
-      'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
+      'GRE/GMAT Graduation,December Cohort',
     time: '3:30 pm - 4:30 pm',
   },
   {
     id: 3,
-    date: '22 March, 2023',
-    title: 'Learning Network Webinars for Music Teachers',
-    image: 'assets/img/bg/evn-img-3.jpg',
+    date: '22 May, 2024',
+    title: 'IELTS/TOEFL Farewell Dinner',
+    image: '/assets/img/afex-pics/events/IMG_9403.jpg',
     description:
-      'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
-    time: '3:30 pm - 4:30 pm',
+      'January Cohort farewell Dinner',
+    time: '3:30 pm - 8:30 pm',
   },
-  {
-    id: 4,
-    date: '22 March, 2023',
-    title: 'Next-Gen Higher Education Students Have Arrived?',
-    image: 'assets/img/bg/evn-img-4.jpg',
-    description:
-      'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
-    time: '3:30 pm - 4:30 pm',
-  },
-  {
-    id: 5,
-    date: '24 March, 2023',
-    title: 'Digital Art & 3D Model – a future for film company',
-    image: 'assets/img/bg/evn-img-5.jpg',
-    description:
-      'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
-    time: '3:30 pm - 4:30 pm',
-  },
-  {
-    id: 6,
-    date: '29 March, 2023',
-    title: 'Conscious Discipline Summer Institute',
-    image: 'assets/img/bg/evn-img-6.jpg',
-    description:
-      'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
-    time: '3:30 pm - 4:30 pm',
-  },
+  // {
+  //   id: 4,
+  //   date: '22 March, 2023',
+  //   title: 'Next-Gen Higher Education Students Have Arrived?',
+  //   image: 'assets/img/bg/evn-img-4.jpg',
+  //   description:
+  //     'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
+  //   time: '3:30 pm - 4:30 pm',
+  // },
+  // {
+  //   id: 5,
+  //   date: '24 March, 2023',
+  //   title: 'Digital Art & 3D Model – a future for film company',
+  //   image: 'assets/img/bg/evn-img-5.jpg',
+  //   description:
+  //     'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
+  //   time: '3:30 pm - 4:30 pm',
+  // },
+  // {
+  //   id: 6,
+  //   date: '29 March, 2023',
+  //   title: 'Conscious Discipline Summer Institute',
+  //   image: 'assets/img/bg/evn-img-6.jpg',
+  //   description:
+  //     'Seamlessly visualize quality ellectual capital without superior collaboration and idea tically',
+  //   time: '3:30 pm - 4:30 pm',
+  // },
 ];
 
 function First() {
@@ -77,19 +82,19 @@ function First() {
               >
                 <div className="event-item mb-30 hover-zoomin">
                   <div className="thumb">
-                    <Link href="/single-event">
-                      <img src={event.image} alt="contact-bg-an-01" />
+                    <Link href="">
+                    <Image src={event.image} width={1180} height={787} alt='event-img'/>
                     </Link>
                   </div>
                   <div className="event-content">
                     <div className="date">{event.date}</div>
                     <h3>
-                      <Link href="/single-event">{event.title}</Link>
+                      <Link href="">{event.title}</Link>
                     </h3>
                     <p>{event.description}</p>
                     <div className="time">
                       {event.time} <i className="fal fa-long-arrow-right" />{' '}
-                      <strong>United Kingdom</strong>
+                      <strong>Nairobi</strong>
                     </div>
                   </div>
                 </div>

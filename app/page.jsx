@@ -17,9 +17,12 @@ import Redslider from './components/menhome/Redslider'
 import Blog from './components/menhome/Blog'
 import Subscribe from './components/menhome/Subscribe'
 import LandingLayout from './LandingLayout'
+//import AnalyticsProvider from './Context/AnalyticsContext'
+
 
 function Main() {
   return (
+    // <AnalyticsProvider>
     <LandingLayout>  
         <Headerone/>
         <Slider/>
@@ -29,14 +32,15 @@ function Main() {
         <Event/>
         
         <Frequently/>
-        <Video/>
+
         <Testimonial/>
       
         <Admission/>
-        <Redslider/>
+        {/* <Redslider/> */}
         <Blog/>
         <Subscribe/>
     </LandingLayout>
+    // </AnalyticsProvider>
   )
 }
 

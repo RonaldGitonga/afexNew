@@ -10,7 +10,7 @@ function page() {
   return (
     <LandingLayout>
         <Header/>
-        <Bredcom title="Home" subtitle="Blog"/>
+        {/* <Bredcom title="Home" subtitle="Blog"/> */}
         <First/>
     </LandingLayout>
   )

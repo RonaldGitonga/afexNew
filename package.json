@@ -6,14 +6,16 @@
     "dev": "next dev & npx next-video sync -w",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-
+    "lint": "next lint",
+    "ngrok": "ngrok http 3000"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.28.1",
+    "@emailjs/browser": "^3.11.0",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@uploadthing/react": "^5.7.0",
     "axios": "^1.6.2",
-    "bcrypt": "5.1.1",
+    "bcrypt": "^5.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "cors": "^2.8.5",
@@ -24,9 +26,11 @@
     "mongoose": "8.0.0",
     "multer": "^1.4.5-lts.1",
     "next": "14.0.0",
-    "next-auth": "^5.0.0-beta.3",
+    "next-auth": "^4.22.3",
+    "next-cloudinary": "^5.13.0",
     "next-video": "^0.9.1",
     "npx": "^10.2.2",
+    "pesapaljs-v3": "^1.0.13",
     "react": "^18",
     "react-countdown": "^2.3.5",
     "react-countup": "^6.4.1",
@@ -39,18 +43,20 @@
     "recharts": "2.9.0",
     "sass": "^1.69.5",
     "slick-slider": "^1.8.2",
-    "swiper": "^9.1.0",
+    "swiper": "^9.4.1",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
-    "uploadthing": "^5.7.4",
     "use-debounce": "9.0.4",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.6",
     "@types/bcrypt": "^5.0.2",
+    "@types/bcryptjs": "^2.4.6",
     "@types/react": "18.2.45",
     "autoprefixer": "^10",
+    "bcryptjs": "^2.4.3",
+    "ngrok": "^5.0.0-beta.2",
     "postcss": "^8",
     "tailwindcss": "^3"
   }

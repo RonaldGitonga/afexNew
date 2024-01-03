@@ -12,11 +12,11 @@ function page() {
   return (
     <LandingLayout>
         <Header/>
-        <Bredcom title="Home" subtitle="Contact Us"/>
+        {/* <Bredcom title="Home" subtitle="Contact Us"/> */}
         <Touch/>
         <Map/>
         <Form/>
-        <Brand/>
+
     </LandingLayout>
   )
 }

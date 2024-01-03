@@ -74,6 +74,10 @@
     visibility: hidden;
 }
 
+.slick-track {
+    display: flex;
+}
+
 .slick-slide
 {
     display: none;

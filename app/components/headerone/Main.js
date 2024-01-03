@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 
 function Main() {
 
@@ -35,14 +36,18 @@ function Main() {
                             <div className="col-lg-4 col-md-4 d-none d-lg-block ">
                                 <div className="header-social">
                                     <span>
+                                    {/* <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right
+                                        xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
+
+                                        </div> */}
                                         Follow us:-
-                                        <Link href="#" title="Facebook">
+                                        <Link href="https://www.facebook.com/afexhome?mibextid=ZbWKwL" title="Facebook">
                                             <i className="fab fa-facebook-f" />
                                         </Link>
-                                        <Link href="#" title="LinkedIn">
+                                        <Link href="https://www.instagram.com/afexkenya?igsh=ODA1NTc5OTg5Nw==" title="LinkedIn">
                                             <i className="fab fa-instagram" />
                                         </Link>
-                                        <Link href="#" title="Twitter">
+                                        <Link href="https://x.com/AfexKenya?t=16INcDh7pyWyzWB_7AKGLQ&s=09" title="Twitter">
                                             <i className="fab fa-twitter" />
                                         </Link>
                                         <Link href="#" title="Twitter">
@@ -62,7 +67,7 @@ function Main() {
                                                 <div className="text">
                                                     <span>Call Now !</span>
                                                     <strong>
-                                                        <Link href="tel:+917052101786">+25470123123</Link>
+                                                        <Link href="tel:+254 704 904 500">+254 704 904 500</Link>
                                                     </strong>
                                                 </div>
                                             </div>
@@ -75,7 +80,7 @@ function Main() {
                                                 <div className="text">
                                                     <span>Email Now</span>
                                                     <strong>
-                                                        <Link href="mailto:info@example.com"> info@example.com</Link>
+                                                        <Link href="mailto:info@example.com">info@afexhub.com</Link>
                                                     </strong>
                                                 </div>
                                             </div>
@@ -112,7 +117,13 @@ function Main() {
                                                     <Link href="/Courses">Courses</Link>
                                                     <ul>
                                                         <li>
-                                                            <Link href="/Courses">Courses</Link>
+                                                            <Link href="/Courses/SAT">SATs</Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/Courses/GRE&GMAT">GRE/GMAT</Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/Courses/IELTS-TOEFL">IELTS/TOEFL</Link>
                                                         </li>
                                                      
                                                       
@@ -120,8 +131,8 @@ function Main() {
                                                     </ul>
                                                 </li>
                                                 <li className="has-sub">
-                                                    <Link href="#">Pages</Link>
-                                                    <ul>
+                                                    <Link href="/Events">Events</Link>
+                                                    {/* <ul>
                                                         <li>
                                                             <Link href="/Events">Events</Link>
                                                         </li>
@@ -138,16 +149,11 @@ function Main() {
                                                         </li>
                                                         
                                                        
-                                                    </ul>
+                                                    </ul> */}
                                                 </li>
                                                 <li className="has-sub">
                                                     <Link href="/Blog">Blog</Link>
-                                                    <ul>
-                                                        <li>
-                                                            <Link href="/Blog">Blog</Link>
-                                                        </li>
-                                                       
-                                                    </ul>
+                                                
                                                 </li>
                                                 <li>
                                                     <Link href="/Contact">Contact</Link>
@@ -183,42 +189,30 @@ function Main() {
                                                     <ul style={{ display: "block" }}>
                                                         <li className="has-sub">
                                                             <a href="/">Home</a>
-                                                            {Events &&
-                                                                <ul style={{ display: "block" }}>
-                                                                    <li>
-                                                                        <Link href="/">University</Link>
-                                                                    </li>
-                                                                
-                                                                </ul>
-                                                            }
-                                                            <a className={`mean-expand ${mobile && "mean-clicked"}`} onClick={() => { setEvent(!Events) }} href="#" style={{ fontSize: 18 }}>
-                                                                {Events ? "-" : "+"}
-                                                            </a>
+                                                          
+                    
                                                         </li>
                                                         <li>
                                                             <Link href="/About">About Us</Link>
                                                         </li>
                                                         <li className="has-sub">
                                                             <Link href="/courses">Courses</Link>
-                                                            {News &&
-                                                                <ul style={{ display: "block" }}>
-                                                                    <li>
-                                                                        <Link href="/courses">Courses</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        {" "}
-                                                                        <Link href="/courses-2">Courses 02</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        {" "}
-                                                                        <Link href="/single-courses">Course Details</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        {" "}
-                                                                        <Link href="/single-courses-2">Course Details 02</Link>
-                                                                    </li>
-                                                                </ul>
-                                                            }
+                                                            <ul>
+                                                                <li>
+                                                                    <Link href="/Courses/SAT">SATs</Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link href="/Courses/GRE&GMAT">GRE/GMAT</Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link href="/Courses/IELTS-TOEFL">IELTS/TOEFL</Link>
+                                                                </li>
+                                                     
+                                                      
+                                                        
+                                                    </ul>
+                                                         
+                                                            
 
                                                             <a className={`mean-expand ${mobile && "mean-clicked"}`} onClick={() => { setNews(!News) }} href="#" style={{ fontSize: 18 }}>
                                                                 {News ? "-" : "+"}
@@ -229,29 +223,9 @@ function Main() {
                                                             {Services &&
                                                                 <ul style={{ display: "block" }}>
                                                                     <li>
-                                                                        <Link href="/event">Event</Link>
+                                                                        <Link href="/Events">Events</Link>
                                                                     </li>
-                                                                    <li>
-                                                                        <Link href="/single-event">Event Details</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/projects">Gallery</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/pricing">Pricing</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/faq">Faq</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/team">Teacher</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/team-single">Teacher Details</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/404-error">404 Error</Link>
-                                                                    </li>
+                                                                
                                                                 </ul>
                                                             }
                                                             <a className={`mean-expand ${mobile && "mean-clicked"}`} onClick={() => { setServices(!Services) }} href="#" style={{ fontSize: 18 }}>
@@ -260,19 +234,8 @@ function Main() {
                                                         </li>
                                                         <li className="has-sub">
                                                             <Link href="/Blog">Blog</Link>
-                                                            {Blog &&
-                                                                <ul style={{ display: "block" }}>
-                                                                    <li>
-                                                                        <Link href="/Blog">Blog</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/Blog-details">Blog Details</Link>
-                                                                    </li>
-                                                                </ul>
-                                                            }
-                                                            <a className={`mean-expand ${mobile && "mean-clicked"}`} onClick={() => { setblog(!Blog) }} href="#" style={{ fontSize: 18 }}>
-                                                                {Blog ? "-" : "+"}
-                                                            </a>
+                                                           
+                                                            
                                                         </li>
                                                         <li className="mean-last">
                                                             <Link href="/Contact">Contact</Link>

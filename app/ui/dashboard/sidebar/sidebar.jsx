@@ -1,6 +1,10 @@
+
 import Image from "next/image";
 import MenuLink from "./menuLink/menuLink";
 import styles from "./sidebar.module.css";
+import { getCurrentUserInfo } from "../../../lib/actions";
+import { signOutButton } from '../../../components/signOutButton/signOutButton'
+
 import {
   MdDashboard,
   MdSupervisedUserCircle,
@@ -16,7 +20,7 @@ import {
   MdSchool,
 } from "react-icons/md";
 import{FaBlogger} from 'react-icons/fa'
-import { auth, signOut } from "../../../auth";
+import { getServerSession } from "next-auth";
 
 const menuItems = [
   {
@@ -88,13 +92,17 @@ const menuItems = [
 ];
 
 const Sidebar = async () => {
-  const { user } = await auth();
+  
+
+ // const user  = await getCurrentUserInfo();
+  //console.log (`the return is ${user}`);
+
   return (
     <div className={styles.container}>
       <div className={styles.user}>
         <Image
           className={styles.userImage}
-          //user.img
+          
           src={"/noavatar.png"}
           alt=""
           width="50"
@@ -102,8 +110,8 @@ const Sidebar = async () => {
         />
         <div className={styles.userDetail}>
           {/* Return User after fixing auth user.username to line 96 */}
-          <span className={styles.username}>{user.username}</span>
-          <span className={styles.userTitle}>{user.role}</span>
+          <span className={styles.username}>user</span>
+          <span className={styles.userTitle}>user</span>
         </div>
       </div>
       <ul className={styles.list}>
@@ -116,17 +124,9 @@ const Sidebar = async () => {
           </li>
         ))}
       </ul>
-      <form
-        action={async () => {
-          "use server";
-          await signOut();
-        }}
-      >
-        <button className={styles.logout}>
-          <MdLogout />
-          Logout
-        </button>
-      </form>
+    
+        <signOutButton/>
+  
     </div>
   );
 };

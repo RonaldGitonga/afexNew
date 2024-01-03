@@ -3,6 +3,7 @@ import './ui/globals.css'
 import './globals.css'
 import styles from './styles.module.css'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -12,8 +13,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={styles}>{children}</body>
-    </html>
+    
+      <html lang="en">
+        <body className={styles}>{children}</body>
+      </html>
+    
   )
 }

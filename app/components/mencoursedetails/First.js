@@ -1,23 +1,24 @@
+'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
 
 const faqItems = [
     {
         id: 'headingThree',
-        question: '01 Cras turpis felis, elementum sed mi at arcu ?',
-        answer: 'Our community is being called to reimagine the future. As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational. We are enriched by the wide range.',
+        question: 'What is the difference between IELTS and TOEFL?',
+        answer: ' IELTS and TOEFL are both English proficiency exams, but IELTS is more widely accepted globally, often preferred for immigration purposes, while TOEFL is commonly required for admission to U.S. universities. The key distinction lies in their scoring systems and test formats.'
     },
-    {
+        {
         id: 'headingOne',
-        question: '02 Vestibulum nibh risus, in neque eleifendulputate sem ?',
-        answer: 'Our community is being called to reimagine the future. As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational. We are enriched by the wide range.',
+        question: 'How can I prepare effectively for the IELTS/TOEFL exams?',
+        answer: ' Effective preparation involves a balanced focus on all language skills—listening, reading, writing, and speaking. Utilize sample tests for practice, expand your vocabulary, refine grammar, and seek feedback to identify areas for improvement.',
     },
     {
         id: 'headingTwo',
-        question: '03 Donec maximus, sapien id auctor ornare ?',
-        answer: 'Our community is being called to reimagine the future. As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational. We are enriched by the wide range.',
-    },
-];
+        question: 'What is the minimum score required to pass the IELTS/TOEFL exams?',
+        answer: 'There is no specific "passing" score; it depends on the requirements of the institution or organization you are applying to. Typically, a score above 6.5 for IELTS and 80 for TOEFL is considered competitive, but it is crucial to check the specific score requirements of your intended destination or institution.',
+    }
+    ];
 
 function First() {
 
@@ -34,78 +35,62 @@ function First() {
                     <div className="lower-content">
                         <div className="row">
                             <div className="text-column col-lg-9 col-md-9 col-sm-12">
-                                <h2>The SAT Test Prep Course</h2>
-                                <div className="upper-box">
-                                    <div className="single-item-carousel owl-carousel owl-theme">
-                                        <figure className="image">
-                                            <img src="assets/img/class/class-9.jpg" alt="" />
-                                        </figure>
-                                    </div>
-                                </div>
+                                <h2>The GRE & GMAT Test Prep Course</h2>
+                             
                                 <div className="inner-column">
                                     <div className="course-meta2 review style2 clearfix mb-30">
                                         <ul className="left">
                                             <li>
                                                 <div className="author">
-                                                    <div className="thumb">
-                                                        <img src="assets/img/bg/testi_avatar.png" alt="image" />
-                                                    </div>
+                                                    
                                                     <div className="text">
-                                                        <Link href="/single-courses-2">Robto Jone</Link>
-                                                        <p>Teacher</p>
+                                                        
+                                                        <p>Instructor-Led</p>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li className="categories">
-                                                <div className="author">
-                                                    <div className="text">
-                                                        <a href="#" className="course-name">
-                                                            Photoshop
-                                                        </a>
-                                                        <p>Categories</p>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            
                                         </ul>
                                         <ul className="right">
-                                            <li className="price">$59.00</li>
+                                            <li className="price"></li>
                                         </ul>
                                     </div>
                                     <h3>Course Overview</h3>
                                     <p>
                                         
-                                        When preparing for the SATs, it's crucial to comprehend the exam's structure. 
-                                        The test consists of sections such as Reading, Writing and Language, and Math, 
-                                        each with specific timing requirements. To gear up, utilize official study 
-                                        materials like the SAT Study Guide and online resources. Dive into comprehensive 
-                                        content review, spanning math topics like algebra and geometry, and honing reading 
-                                        and writing skills. Adopt effective test-taking strategies, emphasizing time 
-                                        management and systematic elimination of multiple-choice options.
+                                    
+                                    The GRE (Graduate Record Examination) assesses verbal, quantitative, and analytical 
+                                    writing skills, commonly required for graduate program admissions. Conversely, the GMAT 
+                                    (Graduate Management Admission Test) evaluates analytical writing, integrated reasoning, 
+                                    quantitative, and verbal skills, focusing on assessing readiness for business and management 
+                                    programs.
                                     </p>
                                     <p>
-                                     AFEX Hub Ltd offers a comprehensive SAT prep program that includes group classes
-                                     and practice tests to help students achieve their best scores on this important 
-                                     standardized test. Our expert tutors are highly experienced and have helped numerous 
-                                     students achieve top scores on the SAT, including those seeking admission to Ivy League 
-                                     universities. Whether you're a first-time test-taker or looking to improve your existing 
-                                     score, our SAT prep program can provide the guidance and support you need to succeed.
+                                    Our GRE and GMAT test prep program provides comprehensive group classes to help 
+                                    students achieve their desired scores and gain admission to top graduate schools. 
+                                    Our expert instructors offer tailored lesson plans, practice tests, and personalized 
+                                    feedback to ensure each student is fully prepared for test day. With a proven track 
+                                    record of success, our program has helped numerous students gain admission to prestigious 
+                                    graduate programs around the world. Join our group classes and take the first step towards 
+                                    your academic and professional goals today.
                                     </p>
                                  
                                     <h4>What You Will Learn</h4>
                                     <p>
-                                        Fusce eleifend donec sapien sed phase lusa pellentesque
-                                        lacus.Vivamus lorem arcu semper duiac. Cras ornare arcu avamus nda
-                                        leo Etiam ind arcu. Morbi justo mauris tempus pharetra interdum at
-                                        congue semper purus. Lorem ipsum dolor sit.The world of search
-                                        engine optimization is complex and ever-changing, but you can
-                                        easily understand the basics.
+                                    
+                                    At our tutoring center, we equip students for success in the GRE and GMAT exams by 
+                                    providing comprehensive preparation. In GRE sessions, students delve into refining verbal, 
+                                    quantitative, and analytical writing skills, gaining strategies for efficient time management. 
+                                    GMAT-focused sessions emphasize honing analytical writing, integrated reasoning, quantitative, 
+                                    and verbal skills, ensuring students are well-prepared for the unique demands of business and 
+                                    management programs.
                                     </p>
                                     <p>
-                                        Lorem ipsum is simply free text used by copytyping refreshing.
-                                        Neque porro est qui dolorem ipsum quia quaed inventore veritatis
-                                        et quasi architecto beatae vitae dicta sunt explicabo. Aelltes
-                                        port lacus quis enim var sed efficitur turpis gilla sed sit amet
-                                        finibus eros. Lorem Ipsum is simply dummy text of the printing.
+                                    Moreover, we encourage a well-rounded approach by immersing students in 
+                                    diverse reading materials for comprehensive understanding. Regular speaking 
+                                    practice fosters fluency, while honing critical thinking skills boosts overall 
+                                    language proficiency. Utilize our varied study resources and seek expert guidance
+                                    for thorough and effective preparation.
                                     </p>
                                     <ul className="pr-ul">
                                         <li>
@@ -113,7 +98,7 @@ function First() {
                                                 <i className="fal fa-check" />
                                             </div>
                                             <div className="text">
-                                                Crawl accessibility so engines can read your website
+                                            Verbal Excellence: Develop advanced vocabulary, critical reading skills, and effective strategies for verbal reasoning.
                                             </div>
                                         </li>
                                         <li>
@@ -121,7 +106,7 @@ function First() {
                                                 <i className="fal fa-check" />
                                             </div>
                                             <div className="text">
-                                                Share-worthy content that earns links, citations
+                                            Quantitative Mastery: Strengthen mathematical foundations and learn advanced problem-solving techniques.
                                             </div>
                                         </li>
                                         <li>
@@ -129,7 +114,7 @@ function First() {
                                                 <i className="fal fa-check" />
                                             </div>
                                             <div className="text">
-                                                Keyword optimized to attract searchers &amp; engines
+                                            Analytical Writing Skills: Enhance the ability to analyze complex issues and communicate thoughts clearly.
                                             </div>
                                         </li>
                                         <li>
@@ -137,7 +122,7 @@ function First() {
                                                 <i className="fal fa-check" />
                                             </div>
                                             <div className="text">
-                                                Title, URL, &amp; description to draw high CTR
+                                            Strategic Time Management: Acquire techniques to optimize time allocation across various sections.
                                             </div>
                                         </li>
                                     </ul>
@@ -153,26 +138,15 @@ function First() {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Monday, Wednesday & Friday</td>
-                                                <td>8-10 Weeks</td>
-                                                <td>-</td>
+                                                <td>Saturdays</td>
+                                                <td>10 Weeks</td>
+                                                <td>1.30pm - 3.30pm</td>
                                             </tr>
-                                            <tr>
-                                                <td>Tuesday, Thursday & Saturday</td>
-                                                <td>8-10 Weeks</td>
-                                                <td>-</td>
-                                            </tr>
+                                           
                                         </tbody>
                                     </table>
-                                    <h3>Frequently Asked Question</h3>
-                                    <p>
-                                        A business or organization established to provide a particular
-                                        service, typically one that involves a organizing
-                                        transactions.Lorem ipsum is simply free text used by copytyping
-                                        refreshing. Neque porro est qui dolorem enim var sed efficitur
-                                        turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply
-                                        dummy text of the printing..
-                                    </p>
+                                    <h3>Frequently Asked Questions</h3>
+                                   
                                     <div className="faq-wrap pt-30 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
                                         <div className="accordion" id="accordionExample">
                                             {faqItems.map((item, index) => (
@@ -188,7 +162,7 @@ function First() {
                                                         </h2>
                                                     </div>
                                                     <div id={`collapse${index}`}
-                                                        className={`collapse${activeIndex === index ? ' show' : ''}`}
+                                                        className={`collapse${activeIndex === index ? ' hide' : 'true'}`}
                                                         data-bs-parent="#accordionExample" >
                                                         <div className="card-body">{item.answer}</div>
                                                     </div>
@@ -205,7 +179,7 @@ function First() {
                                         <ul className="project-info clearfix">
                                             <li>
                                                 <div className="priceing">
-                                                    <strong>Ksh.65000.00</strong> 
+                                                    <strong>Ksh.65,000/-</strong> 
                                                     
                                                 </div>
                                             </li>
@@ -213,7 +187,7 @@ function First() {
                                            
                                             <li>
                                                 <span className="icon fal fa-clock" />{" "}
-                                                <strong>Duration: </strong> <span>8-10 weeks</span>
+                                                <strong>Duration: </strong> <span>10 weeks</span>
                                             </li>
                                             <li>
                                                 <span className="icon fal fa-user" />{" "}

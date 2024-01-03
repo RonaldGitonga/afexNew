@@ -4,7 +4,7 @@ import Link from 'next/link'
 function Main({subtitle, title }) {
   return (
     <>
-        <section className="breadcrumb-area d-flex  p-relative align-items-center" style={{ backgroundImage: "url(assets/img/bg/bdrc-bg.png)" }} >
+        <section className="breadcrumb-area d-flex  p-relative align-items-center"  >
             <div className="container">
                 <div className="row align-items-center">
                 <div className="col-xl-12 col-lg-12">

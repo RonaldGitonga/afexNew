@@ -1,4 +1,6 @@
 import React from 'react'
+import Backgroundtwo from '../../../public/assets/img/afex-pics/resized/tutors.jpg';
+import Image from 'next/image';
 
 function Shep() {
     
@@ -7,19 +9,20 @@ function Shep() {
       icon: 'assets/img/icon/fea-icon01.png',
       title: 'Skilled Teachers',
       description:
-        'Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry, prayers, or readings from.',
+      
+        "Unlock your potential with our skilled tutors. Elevate your learning experience with personalized guidance and mastery-focused teaching. "
     },
     {
       icon: 'assets/img/icon/fea-icon02.png',
       title: 'Affordable Courses',
       description:
-        'Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry, prayers, or readings from.',
+        ' Explore our affordable courses, where quality education meets budget-friendly options. Affordable excellence, accessible for everyone.',
     },
     {
       icon: 'assets/img/icon/fea-icon03.png',
       title: 'Efficient & Flexible',
       description:
-        'Special wedding garments are often worn, and the ceremony is sometimes followed by a wedding reception. Music, poetry, prayers, or readings from.',
+        'Our adaptable schedules cater to your needs, ensuring a personalized and effective path to success.',
     },
   ];
 
@@ -27,7 +30,7 @@ function Shep() {
     <>
       <section className="steps-area p-relative" style={{ backgroundColor: '#032e3f' }}>
         <div className="animations-10">
-          <img src="assets/img/bg/an-img-10.png" alt="an-img-01" />
+          <Image src={Backgroundtwo} alt="an-img-01" width={627} height={494}/>
         </div>
         <div className="container">
           <div className="row align-items-center">
@@ -35,11 +38,8 @@ function Shep() {
               <div className="section-title mb-35 wow fadeInDown animated"
                 data-animation="fadeInDown"
                 data-delay=".4s">
-                <h2>Our Best Features</h2>
-                <p>
-                  Special wedding garments are often worn, and the ceremony is
-                  sometimes followed by a wedding reception. Music, poetry.
-                </p>
+                <h2></h2>
+              
               </div>
               <ul className="pr-20">
                 {features.map((feature) => (
@@ -63,7 +63,7 @@ function Shep() {
             </div>
             <div className="col-lg-6 col-md-12">
               <div className="step-img wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-                <img src="assets/img/bg/steps-img.png" alt="class image" />
+              <Image src={Backgroundtwo} alt="an-img-01" width={727} height={400}/>
               </div>
             </div>
           </div>

@@ -1,15 +1,14 @@
-"use server";
 
+import { getServerSession } from "next-auth";
+import  {authOptions} from '../api/auth/[...nextauth]/route'
 import { revalidatePath } from "next/cache";
-import { Course, User,Blog } from "../lib/models";
+import { Course,User,Blog } from "../lib/models";
 import { connectToDB } from "./utils/connectToDb";
 import { redirect } from "next/navigation";
-import bcrypt from "bcrypt";
-import { signIn } from "../auth";
+import bcrypt from "bcryptjs";
+import axios from "axios";
 
 
-import {writeFile} from 'fs/promises'
-import { join } from "path";
 
 export const addUser = async (formData) => {
   const { username, email, password, phone, address, role, isActive } =
@@ -163,42 +162,42 @@ export const deleteCourse = async (formData) => {
 //blog actions
 
 
-export const addBlog=async(formData)=>{
-  const { title, description, slug, date, file} =
-  Object.fromEntries(formData);
+// export const addBlog=async(formData)=>{
+//   const { title, description, slug, date, file} =
+//   Object.fromEntries(formData);
 
-  if (!file){
-    throw new Error ('No file uploaded!')
+//   if (!file){
+//     throw new Error ('No file uploaded!')
 
-  }
-  const bytes=await file.arrayBuffer()
-  const buffer=Buffer.from(bytes)
+//   }
+//   const bytes=await file.arrayBuffer()
+//   const buffer=Buffer.from(bytes)
 
-  const path=join('/','tmp',file.name)
-  await writeFile(path,buffer)
-  console.log(`open ${path} to see the uploaded file`)
+//   const path=join('/','tmp',file.name)
+//   await writeFile(path,buffer)
+//   console.log(`open ${path} to see the uploaded file`)
  
-    try {
-   connectToDB();
+//     try {
+//    connectToDB();
 
-  const newBlog = new Blog({
-     title,
-     description,
-     slug,
-     date,
+//   const newBlog = new Blog({
+//      title,
+//      description,
+//      slug,
+//      date,
   
-   });
+//    });
 
-   await newBlog.save();
-  console.log('Blog Saved Successfully')
+//    await newBlog.save();
+//   console.log('Blog Saved Successfully')
  
- } catch (err) {
+//  } catch (err) {
  
-   console.log(err);
-   throw new Error("Failed to create blog!");
+//    console.log(err);
+//    throw new Error("Failed to create blog!");
  
- }
-}
+//  }
+// }
 
 
 
@@ -232,34 +231,13 @@ export const addEvent = async (formData) => {
 
 
 
-
-
-
-
-
-
-export const authenticate = async (prevState, formData) => {
-  const { username, password } = Object.fromEntries(formData);
-
-  try {
-    await signIn("credentials", { username, password });
-  } catch (err) {
-    return "Wrong Credentials!";
-  }
-};
-
-
-//getCurrentUser
-
-
-
-
 export async function getSession() {
   return await getServerSession(authOptions)
   
 }
 
-export default async function getCurrentUser(){
+//get current
+export  async function getCurrentUser(){
     try {  
         const session=await getSession()
 
@@ -267,7 +245,7 @@ export default async function getCurrentUser(){
             return null
         }
 
-        const currentUser= await User.findUnique({
+        const currentUser= await User.find({
             where:{
                 email:session.user.email 
 
@@ -275,7 +253,7 @@ export default async function getCurrentUser(){
     })
 
         if(!currentUser){
-            return null
+          return null
         }
 
         return{
@@ -283,6 +261,7 @@ export default async function getCurrentUser(){
             createdAt:currentUser.createdAt.toISOString(),
             updatedAt:currentUser.updatedAt.toISOString(),
             emailVerified:currentUser.emailVerified?.toISOString() || null,
+      
 
 
         }
@@ -293,3 +272,107 @@ export default async function getCurrentUser(){
         return null
     }
 }
+
+// export  async function getCurrentUserInfo(){
+//   try {  
+//       const session=await getSession()
+
+//       if(!session?.user?.email){
+//           return null
+//       }
+
+//       const currentUser= await User.find({
+//           where:{
+//               email:session.user.email 
+
+//           }
+//   })
+
+//       if(!currentUser){
+//           return null
+//       }
+
+//       return{
+//           ...currentUser,
+  
+//           username:currentUser.username,
+//           userRole:currentUser.role,
+//           userImage:currentUser.image,
+
+
+//       }
+
+
+//   }
+//       catch (error) {
+//         throw new Error(error);
+//   }
+// }
+
+    
+
+  //get Access Token 
+  export const getAccessToken = async () => {
+
+    try {
+      const response = await fetch('https://cybqa.pesapal.com/pesapalv3/api/Auth/RequestToken', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          "consumer_key": "qkio1BGGYAXTu2JOfm7XSXNruoZsrqEW", // Replace with your actual consumer key
+          "consumer_secret":"osGQ364R49cXKeOYSpaOnT++rHs=", // Replace with your actual consumer secret
+        }),
+      });
+    
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+    
+      const data = await response.json();
+      const accessToken=data.token;
+      return accessToken;
+      
+    } catch (error) {
+     
+      throw new Error(error.message || 'Failed to fetch Token data');
+    }
+    }
+
+    //get IPN ID
+    export const getIpnID=async()=>{
+      const accessToken=await getAccessToken()
+    console.log('The access token returned is '+ accessToken)
+    try {
+      const data = {
+        url: 'https://e50a-41-212-41-131.ngrok-free.app/payment/registerIPN',
+        ipn_notification_type: 'GET',
+      };
+    
+    
+      const response = await axios.post(
+        'https://cybqa.pesapal.com/pesapalv3/api/URLSetup/RegisterIPN',
+        data,
+        {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${{accessToken}}`,
+          },
+        }
+      );
+    
+      const ipn_ID=JSON.stringify(response.data.ipn_id)
+      console.log ('the new ipn_id is from actions is '+ipn_ID);
+    
+     
+      return ipn_ID;
+    } catch (error) {
+      console.error(error);
+      throw new Error("did not recieve IPN id")
+    }
+    
+    
+    };

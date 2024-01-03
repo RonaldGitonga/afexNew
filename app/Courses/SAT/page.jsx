@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import Bredcom from '../../../components/Bredcom/Main'
-import Header from '../../../components/headerone/Main'
-import First from '../../../components/mencoursedetails/First'
-import Brand from '../../../components/menhomethree/Brand'
-import LandingLayout from '../../../LandingLayout'
+import Bredcom from '../../components/Bredcom/Main'
+import Header from '../../components/headerone/Main'
+import Third from '../../components/mencoursedetails/Third'
+import Brand from '../../components/menhomethree/Brand'
+import LandingLayout from '../../LandingLayout'
 
 
 
@@ -15,9 +15,9 @@ function page() {
   return (
     <LandingLayout>
         <Header/>
-        <Bredcom title="Home" subtitle="SAT Prep" />
-        <First/>
-        <Brand/>
+        {/* <Bredcom title="Courses" subtitle="SAT Prep" /> */}
+        <Third/>
+        
     </LandingLayout>
   )
 }
