@@ -1,3 +1,4 @@
+'use server'
 import { addCourse } from "../../../lib/actions";
 import styles from "../../../ui/dashboard/courses/addcourse/addcourse.module.css";
 
